@@ -26,8 +26,6 @@ artist_repository.save(artist_5)
 artist_repository.save(artist_6)
 artist_repository.save(artist_7)
 
-artist_repository.select_all() 
-
 print_1 = Print("West Haven Waters Angus", artist_1, "25cm x 81cm", 35, 6, 200)
 print_2 = Print("Fishing Boats and Creels", artist_1, "81cm x 81cm", 30, 6, 205)
 print_3 = Print("Moonlight-Ethie, Scotland", artist_1, "81cm x 81cm", 30, 6, 310)
