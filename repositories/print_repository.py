@@ -4,7 +4,7 @@ from models.print import Print
 import repositories.artist_repository as artist_repository 
 
 def save(artist):
-    sql = "INSERT INTO prints (title, artist, size, price) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
+    sql = "INSERT INTO prints (title, artist, size, price, printing_cost, stock) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
     values = [print.title, print.artist, print.size, print.price, print.printing_cost, print.stock]
     results = run_sql(sql, values)
     id = results[0]['id']

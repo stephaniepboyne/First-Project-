@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1>Prints</h1>
+
+<a href="prints/new">New Print</a>
+
+<ul>
+    {% for print in prints %} 
+    <li>
+        <p><b>{{ print.title }}</b></p>
+        <p>{{ print.artist }}</p>
+        <p>{{ print.size }}</p>
+        <p>Price: £{{ print.price }}</p>
+        <p>Printing cost: £{{ print.printing_cost }}</p>
+        <p>Stock quantity: {{ print.stock }}</p>
+    </li>
+    {% endfor %}
+</ul>
 
 
 {% endblock %}
