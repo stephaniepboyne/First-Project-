@@ -5,6 +5,6 @@ class Print:
         self.artist = artist
         self.size = size
         self.price = price 
-        self.print_cost = printing_cost
+        self.printing_cost = printing_cost
         self.stock = stock  
         self.id = id 

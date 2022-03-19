@@ -12,6 +12,6 @@ CREATE TABLE prints (
     artist_id INT REFERENCES artists(id),
     size VARCHAR(255),
     price INT,
-    printing_cost INT
+    printing_cost INT,
     stock INT
 );
