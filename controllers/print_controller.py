@@ -29,8 +29,24 @@ def create_new_print():
     print_repository.save(print)
     return redirect("/prints")
 
-@prints_blueprint.route("/")
+@prints_blueprint.route("/prints/<id>/edit", methods=["GET"])
+def edit_print(id):
+    print = print_repository.select(id)
+    artists = artist_repository.select_all()
+    return render_template("prints/edit.html", print = print, artists = artists)
 
+@prints_blueprint.route("/prints/<id>", methods=['POST'])
+def update_print(id):
+    title = request.form["title"]
+    artist_id = request.form["artist_id"]
+    size = request.form["size"]
+    price = request.form["price"]
+    printing_cost = request.form["printing_cost"]
+    stock = request.form["stock"]
+    artist = artist_repository.select(artist_id)
+    print = Print(title, artist, size, price, printing_cost, stock, id)
+    print_repository.update(print)
+    return redirect("/prints")
 
 
 

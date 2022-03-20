@@ -14,9 +14,8 @@
         <p>Price: £{{ print.price }}</p>
         <p>Printing cost: £{{ print.printing_cost }}</p>
         <p>Stock quantity: {{ print.stock }}</p>
+        <a href="/prints/{{ print.id }}/edit">Edit</a>
     </li>
     {% endfor %}
 </ul>
-
-
 {% endblock %}
