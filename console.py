@@ -1,4 +1,3 @@
-from curses import qiflush
 import pdb 
 
 from models.artist import Artist
@@ -7,8 +6,9 @@ from models.print import Print
 import repositories.artist_repository as artist_repository
 import repositories.print_repository as print_repository 
 
-artist_repository.delete_all()
 print_repository.delete_all()
+artist_repository.delete_all()
+
 
 artist_1 = Artist("Nael Hanna")
 artist_2 = Artist("George Birrell")
