@@ -22,3 +22,4 @@ def create_new_artist():
     artist = Artist(name)
     artist_repository.save(artist)
     return redirect("/artists")
+

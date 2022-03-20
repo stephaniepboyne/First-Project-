@@ -42,4 +42,14 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-        
+def prints(artist):
+    prints = []
+
+    sql = "SELECT * FROM prints where artist_id = %s"
+    values = [artist.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        print = Print(row['title'], row['artist_id'], row['size'], row['price'], row['printing_cost'], row['stock'], row['id'])
+        prints.append(print)
+    return prints
