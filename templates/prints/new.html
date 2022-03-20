@@ -8,7 +8,7 @@
     <input type="text" id="title" name="title">
 
     <label for="artist">Artist:</label>
-    <select name="artist" id="artist">
+    <select name="artist_id" id="artist">
         {% for artist in artists %}
         <option value="{{ artist.id }}">{{ artist.name }}</option>
         {% endfor %}
