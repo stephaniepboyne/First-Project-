@@ -48,6 +48,10 @@ def update_print(id):
     print_repository.update(print)
     return redirect("/prints")
 
+@prints_blueprint.route("/prints/<id>/delete", methods=["POST"])
+def delete_print(id):
+    print_repository.delete(id)
+    return redirect("/prints")
 
 
 
