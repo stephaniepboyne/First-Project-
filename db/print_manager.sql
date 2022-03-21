@@ -9,7 +9,7 @@ CREATE TABLE artists (
 CREATE TABLE prints (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255),
-    artist_id INT REFERENCES artists(id),
+    artist_id INT REFERENCES artists(id) ON DELETE CASCADE,
     size VARCHAR(255),
     price INT,
     printing_cost INT,

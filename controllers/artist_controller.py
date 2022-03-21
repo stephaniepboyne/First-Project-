@@ -28,3 +28,8 @@ def filter(id):
     artist = artist_repository.select(id)
     prints = artist_repository.prints(artist)
     return render_template("artists/filter.html", artist=artist, prints=prints)
+
+@artists_blueprint.route("/artists/<id>/delete", methods=["POST"])
+def delete_artist(id):
+    artist_repository.delete(id)
+    return redirect("/artists")
