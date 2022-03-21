@@ -33,3 +33,4 @@ def filter(id):
 def delete_artist(id):
     artist_repository.delete(id)
     return redirect("/artists")
+

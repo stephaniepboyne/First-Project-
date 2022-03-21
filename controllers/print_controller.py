@@ -1,8 +1,10 @@
 from flask import Blueprint, Flask, render_template, redirect, request
+import markupsafe
 
 import repositories.print_repository as print_repository 
 import repositories.artist_repository as artist_repository
 from models.print import Print
+from models.markup import calculate_markup
 
 prints_blueprint = Blueprint("prints", __name__ )
 
@@ -10,6 +12,7 @@ prints_blueprint = Blueprint("prints", __name__ )
 def display_print_inventory():
     prints = print_repository.select_all()
     return render_template("prints/index.html", all_prints = prints)
+
 
 @prints_blueprint.route("/prints/new", methods=['GET'])
 def new_print():
@@ -34,6 +37,12 @@ def edit_print(id):
     print = print_repository.select(id)
     artists = artist_repository.select_all()
     return render_template("prints/edit.html", print = print, artists = artists)
+
+@prints_blueprint.route("/prints/<id>/markup")
+def view_markup(id):
+    print = print_repository.select(id)
+    markup = calculate_markup(print)
+    return render_template("prints/markup.html", print = print, markup = markup)
 
 @prints_blueprint.route("/prints/<id>", methods=['POST'])
 def update_print(id):

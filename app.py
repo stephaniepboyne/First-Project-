@@ -8,6 +8,8 @@ app = Flask(__name__)
 app.register_blueprint(prints_blueprint)
 app.register_blueprint(artists_blueprint)
 
+
+
 @app.route("/")
 def home():
     return render_template('index.html')

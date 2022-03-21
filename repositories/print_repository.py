@@ -47,3 +47,7 @@ def update(print):
     sql = "UPDATE prints SET (title, artist_id, size, price, printing_cost, stock) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [print.title, print.artist.id, print.size, print.price, print.printing_cost, print.stock, print.id]
     run_sql(sql, values)
+
+
+
+
