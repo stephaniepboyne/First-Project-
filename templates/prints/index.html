@@ -7,18 +7,25 @@
 
 <ul>
     {% for print in all_prints %} 
-    <li>
-        <p><b>{{ print.title }}</b></p>
-        <p>{{ print.artist.name }}</p>
-        <p>{{ print.size }}</p>
-        <p>Price: £{{ print.price }}</p>
-        <p>Printing cost: £{{ print.printing_cost }}</p>
-        <p>Stock quantity: {{ print.stock }}</p>
-        <a href="/prints/{{ print.id }}/edit">Edit</a>
-        <form action="/prints/{{ print.id }}/delete" method="POST">
-            <input type="submit" value="Delete">
-        </form>
-    </li>
+        <li>
+            <p><b>{{ print.title }}</b></p>
+            <p>{{ print.artist.name }}</p>
+            <p>{{ print.size }}</p>
+            <p>Price: £{{ print.price }}</p>
+            <p>Printing cost: £{{ print.printing_cost }}</p>
+            <p>Stock quantity: {{ print.stock }}</p>
+            {% if print.stock < 50 %}
+                {% if print.stock == 0 %}
+                    <p>OUT OF STOCK</p>
+                {% else %}
+                <p>LOW STOCK</p>
+                {% endif %}
+            {% endif %}
+            <a href="/prints/{{ print.id }}/edit">Edit</a>
+            <form action="/prints/{{ print.id }}/delete" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+        </li>
     {% endfor %}
 </ul>
 {% endblock %}

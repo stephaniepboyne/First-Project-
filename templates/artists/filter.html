@@ -11,6 +11,13 @@
         <p>Price: £{{ print.price }}</p>
         <p>Printing cost: £{{ print.printing_cost }}</p>
         <p>Stock quantity: {{ print.stock }}</p>
+        <!-- {% if print.stock < 50 %}
+            {% if print.stock == 0 %}
+                <p>OUT OF STOCK</p>
+            {% elif %}
+                <p>LOW STOCK</p>
+            {% endif %}
+         {% endif %} -->
         <a href="/prints/{{ print.id }}/edit">Edit</a>
         <form action="/prints/{{ print.id }}/delete" method="POST">
             <input type="submit" value="Delete">
