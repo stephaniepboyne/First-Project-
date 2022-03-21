@@ -1,0 +1,33 @@
+body > header > h1 {
+    font-family: 'Gilda Display', serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.navigation {
+    text-align: center;
+}
+.navigation > a {
+    font-family: 'Gilda Display', serif;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navigation > a:visited {
+    color: black;
+}
+
+.navigation > a:hover {
+    color: red;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 45%;
+
+}
