@@ -23,3 +23,8 @@ def create_new_artist():
     artist_repository.save(artist)
     return redirect("/artists")
 
+@artists_blueprint.route("/artists/<id>")
+def filter(id):
+    artist = artist_repository.select(id)
+    prints = artist_repository.prints(artist)
+    return render_template("artists/filter.html", artist=artist, prints=prints)

@@ -53,3 +53,5 @@ def prints(artist):
         print = Print(row['title'], row['artist_id'], row['size'], row['price'], row['printing_cost'], row['stock'], row['id'])
         prints.append(print)
     return prints
+
+
