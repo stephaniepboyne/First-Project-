@@ -10,6 +10,7 @@
         <p>{{ print.size }}</p>
         <p>Price: £{{ print.price }}</p>
         <p>Printing cost: £{{ print.printing_cost }}</p>
+        <a href="/prints/{{ print.id }}/markup">View markup</a>
         <p>Stock quantity: {{ print.stock }}</p>
         {% if print.stock < 50 %}
             {% if print.stock == 0 %}

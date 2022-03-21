@@ -1,28 +1,39 @@
 body > header > h1 {
-    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+}
+
+body > header > h1 > a {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin-top: 50px;
+    color: gray;
+    text-decoration: none;
+}
+
+body > header > h1 > a:hover {
     color: lightgray;
 }
 
 .navigation {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .navigation > a {
-    font-family: 'Gilda Display', serif;
-    color: black;
-    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    color: gray;;
     padding: 10px;
     text-decoration: none;
+    font-weight: bolder;
+    font-weight: 900;
 }
 
 .navigation > a:visited {
-    color: black;
+    color: gray;
 }
 
 .navigation > a:hover {
-    color: red;
+    color: lightgray;
 }
 
 .image {
@@ -31,13 +42,32 @@ body > header > h1 {
     margin-right: auto;
     margin-top: 40px;
     width: 45%;
-
 }
 
-.artists {
-    font-family: 'Gilda Display', serif;
-    padding: 10px;
+.new_artist {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.new_artist > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    color: gray;
+    text-align: right;
+    text-decoration: none;
+    padding: 4px 10px;
+}
+
+.new_artist > a:hover {
+    color: lightgray;
+    border-color: black;
+}
+
+.select_artist > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    font-weight: bold;
     color: black;
-    text-align: center;
-    font-size: x-small;
+    padding: 10px;
+    text-decoration: none;
 }

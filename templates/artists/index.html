@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<hr>
-<div class ="artists"><h1>ARTISTS</h1></div>
 
-<a href="artists/new">New Artist</a>
+<div class="new_artist"><a href="artists/new">add new artist</a></div>
 
 <ul>
     {% for artist in all_artists %} 
     <li>
-        <p><b><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></b></p>
+        <span style="text-transform:uppercase;">
+            <p class="select_artist"><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></p> 
+        </span>
         <form action="/artists/{{ artist.id }}/delete" method="POST">
             <input type="submit" value="Delete">
         </form>
