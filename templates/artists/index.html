@@ -4,18 +4,21 @@
 
 <div class="new_artist"><a href="artists/new">add new artist</a></div>
 
-<ul>
-    {% for artist in all_artists %} 
-    <div>
-        <img src="{{ artist.image_pathway }}" alt="Print" class="print_image">
-        <span style="text-transform:uppercase;">
-            <p class="select_artist"><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></p> 
-        </span>
-        <form action="/artists/{{ artist.id }}/delete" method="POST">
-            <input type="submit" value="Delete">
-        </form>
-    </div>
+<div>
+    <ul class="image_text">
+        {% for artist in all_artists %} 
+        <li>
+            <img src="{{ artist.image_pathway }}" alt="Print" class="print_image">
+            <span style="text-transform:uppercase;">
+                <p class="select_artist"><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></p> 
+            </span>
+            <form action="/artists/{{ artist.id }}/delete" method="POST" class="delete">
+                <input type="submit" value="Delete">
+            </form>
+        </li>
     {% endfor %}
 </ul>
+    
+</div>
 
 {% endblock %}
