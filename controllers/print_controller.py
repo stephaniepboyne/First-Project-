@@ -1,5 +1,4 @@
 from flask import Blueprint, Flask, render_template, redirect, request
-import markupsafe
 
 import repositories.print_repository as print_repository 
 import repositories.artist_repository as artist_repository
