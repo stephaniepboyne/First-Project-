@@ -51,8 +51,9 @@ def update_print(id):
     price = request.form["price"]
     printing_cost = request.form["printing_cost"]
     stock = request.form["stock"]
+    image_print_pathway = request.form["image_print_pathway"]
     artist = artist_repository.select(artist_id)
-    print = Print(title, artist, size, price, printing_cost, stock, id)
+    print = Print(title, artist, size, price, printing_cost, stock, image_print_pathway, id)
     print_repository.update(print)
     return redirect("/prints")
 

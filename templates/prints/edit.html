@@ -27,6 +27,9 @@
     <label for="stock">Stock quantity:</label>
     <input type="number" name="stock" id="stock" value="{{print.stock}}" required>
 
+    <label for="image">Enter image url:</label>
+    <input type="url" name="image_print_pathway" id="image_print_pathway" value="{{print.image_print_pathway}}" required>
+
     <button type="submit">Update Print</button>
 </form>
 {% endblock %}
