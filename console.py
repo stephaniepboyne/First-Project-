@@ -10,12 +10,12 @@ print_repository.delete_all()
 artist_repository.delete_all()
 
 
-artist_1 = Artist("Nael Hanna", "static/images/Nael Hanna - Fishing Boats.jpg")
-artist_2 = Artist("George Birrell", "static/images/George Birrell.jpg")
-artist_3 = Artist("Rebecca Collins", "static/images/Cannach.jpg")
-artist_4 = Artist("Matthew Draper", "static/images/Light and Air.jpg")
-artist_5 = Artist("Barry McGlashan", "static/images/Islands.jpg")
-artist_7 = Artist("Deborah Phillips", "static/images/Cow Parsley Sunset.jpg")
+artist_1 = Artist("Nael Hanna", "http://www.thompsonsgallery.co.uk/artists-images/nael-hanna-fishing-boats-and-creels-mixed-media-32-x-32-inches-7500-unframed.jpg")
+artist_2 = Artist("George Birrell", "https://cdn11.bigcommerce.com/s-cfdb8/images/stencil/1280x1280/products/185/263/East_Coast_Blues_4aa82fee205c2__96791.1297621555.jpg?c=2")
+artist_3 = Artist("Rebecca Collins", "https://images.squarespace-cdn.com/content/v1/5c4a22dd29711455c39e8b20/1548366383322-FF96T3FNRWR6JS8LC309/1934_00613.jpg?format=2500w")
+artist_4 = Artist("Matthew Draper", "https://scottishgallery.imgix.net/work/Cat.-26-Light-and-Air-2021-Pastel-on-paper-94cm-x-125cm-%C2%A377500.00-rfw.jpg?q=70&auto=compress,format&fit=clip&w=900&h=900")
+artist_5 = Artist("Barry McGlashan", "https://scottishgallery.imgix.net/work/58.Islands-2021-oil-on-panel-30-x-40.5-cm.jpg?q=70&auto=compress,format&fit=clip&w=900&h=900")
+artist_7 = Artist("Deborah Phillips", "http://www.strathearn-gallery.com/admin/images/items/FS_21243.JPG")
 
 artist_repository.save(artist_1)
 artist_repository.save(artist_2)

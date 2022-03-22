@@ -54,5 +54,8 @@ def prints(artist):
         prints.append(print)
     return prints
 
-
+def update(artist):
+    sql = "UPDATE artists SET (name, image_pathway) = (%s, %s) WHERE id = %s"
+    values = [artist.name, artist.image_pathway, artist.id]
+    run_sql(sql, values)
 

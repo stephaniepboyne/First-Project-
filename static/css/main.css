@@ -187,6 +187,18 @@ body > header > h1 > a:hover {
     text-decoration: none;
 }
 
+.edit2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    color: gray;
+    text-align:left;
+    text-decoration: none;
+}
+
+.edit2:hover {
+    color: lightgray;
+}
+
 .edit:hover {
     color: darkgray;
 }

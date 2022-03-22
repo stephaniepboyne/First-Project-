@@ -35,3 +35,15 @@ def delete_artist(id):
     artist_repository.delete(id)
     return redirect("/artists")
 
+@artists_blueprint.route("/artists/<id>/edit", methods=["GET"])
+def edit_artist(id):
+    artist = artist_repository.select(id)
+    return render_template("artists/edit.html", artist=artist)
+
+@artists_blueprint.route("/artists/<id>", methods=['POST'])
+def update_artist(id):
+    name = request.form["name"]
+    image_pathway = request.form["image_pathway"]
+    artist = Artist(name, image_pathway, id)
+    artist_repository.update(artist)
+    return redirect("/artists")
