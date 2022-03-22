@@ -242,3 +242,13 @@ body > header > h1 > a:hover {
     text-align: center;
     padding-bottom: 30px;
 }
+
+.artist_name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    color: gray;
+    text-align: right;
+    text-decoration: none;
+    padding-bottom: 60px;
+    text-align: center;
+}

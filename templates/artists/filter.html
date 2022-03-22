@@ -2,9 +2,11 @@
 
 {% block content %}
 
+<span style="text-transform:uppercase;">><h1 class="artist_name">{{ artist.name }}</h1></span>
+
 <ul class="print_image_text">
     {% for print in prints %} 
-    <li class="image_text">
+    <li>
         <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image">
         <p>{{ print.title }}</p>
         <p>{{ artist.name }}</p>
