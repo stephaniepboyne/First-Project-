@@ -8,7 +8,8 @@
     <ul class="image_text">
         {% for artist in all_artists %} 
         <li>
-            <img src="{{ artist.image_pathway }}" alt="Print" class="print_image">
+            <a href="/artists/{{ artist.id }}">
+                <img src="{{ artist.image_pathway }}" alt="Print" class="print_image"></a>
             <span style="text-transform:uppercase;">
                 <p class="select_artist"><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></p> 
             </span>

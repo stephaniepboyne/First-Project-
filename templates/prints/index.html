@@ -4,27 +4,27 @@
 
 <div class="new_artist"><a href="prints/new">add new print</a></div>
 
-<ul class="image_text">
+<ul class="print_image_text">
     {% for print in all_prints %} 
         <li>
-            <img src="{{ print.image_print_pathway }}" alt="Print" class="print_image">
-            <p><b>{{ print.title }}</b></p>
-            <p>{{ print.artist.name }}</p>
-            <p>{{ print.size }}</p>
+            <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image">
+            <p>Title: {{ print.title }}</p>
+            <p>Artist: {{ print.artist.name }}</p>
+            <p>Dimensions: {{ print.size }}</p>
             <p>Price: £{{ print.price }}</p>
             <p>Printing cost: £{{ print.printing_cost }}</p>
-            <a href="/prints/{{ print.id }}/markup">View markup</a>
+            <a href="/prints/{{ print.id }}/markup" class="view_markup">View markup</a>
             <p>Stock quantity: {{ print.stock }}</p>
-            {% if print.stock < 50 %}
+            <div class="low">{% if print.stock < 50 %}
                 {% if print.stock == 0 %}
                     <p>OUT OF STOCK</p>
                 {% else %}
                 <p>LOW STOCK</p>
                 {% endif %}
-            {% endif %}
-            <a href="/prints/{{ print.id }}/edit">Edit</a>
-            <form action="/prints/{{ print.id }}/delete" method="POST">
-                <input type="submit" value="Delete">
+            {% endif %}</div>
+            <a href="/prints/{{ print.id }}/edit" class="edit">Edit</a>
+            <form action="/prints/{{ print.id }}/delete" method="POST" class="delete_print">
+                <input type="submit" value="Delete Print" class="button">
             </form>
         </li>
     {% endfor %}
