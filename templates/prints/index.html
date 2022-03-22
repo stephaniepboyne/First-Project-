@@ -8,13 +8,6 @@
     {% for print in all_prints %} 
         <li>
             <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image">
-            <p>Title: {{ print.title }}</p>
-            <p>Artist: {{ print.artist.name }}</p>
-            <p>Dimensions: {{ print.size }}</p>
-            <p>Price: £{{ print.price }}</p>
-            <p>Printing cost: £{{ print.printing_cost }}</p>
-            <a href="/prints/{{ print.id }}/markup" class="view_markup">View markup</a>
-            <p>Stock quantity: {{ print.stock }}</p>
             <div class="low">{% if print.stock < 50 %}
                 {% if print.stock == 0 %}
                     <p>OUT OF STOCK</p>
@@ -22,6 +15,13 @@
                 <p>LOW STOCK</p>
                 {% endif %}
             {% endif %}</div>
+            <p>Title: {{ print.title }}</p>
+            <p>Artist: {{ print.artist.name }}</p>
+            <p>Dimensions: {{ print.size }}</p>
+            <p>Price: £{{ print.price }}</p>
+            <p>Printing cost: £{{ print.printing_cost }}</p>
+            <a href="/prints/{{ print.id }}/markup" class="view_markup">View markup</a>
+            <p>Stock quantity: {{ print.stock }}</p>
             <a href="/prints/{{ print.id }}/edit" class="edit">Edit</a>
             <form action="/prints/{{ print.id }}/delete" method="POST" class="delete_print">
                 <input type="submit" value="Delete Print" class="button">
