@@ -3,8 +3,8 @@ from models.artist import Artist
 from models.print import Print 
 
 def save(artist):
-    sql = "INSERT INTO artists (name) VALUES (%s) RETURNING *"
-    values = [artist.name]
+    sql = "INSERT INTO artists (name, image_pathway) VALUES (%s, %s) RETURNING *"
+    values = [artist.name, artist.image_pathway]
     results = run_sql(sql, values)
     id = results[0]['id']
     artist.id = id
@@ -17,7 +17,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        artist = Artist(row['name'], row['id'])
+        artist = Artist(row['name'], row['image_pathway'], row['id'])
         artists.append(artist)
     return artists 
 
@@ -30,7 +30,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        artist = Artist(result['name'], result['id'])
+        artist = Artist(result['name'], result['image_pathway'], result['id'])
     return artist 
 
 def delete_all():

@@ -6,14 +6,15 @@
 
 <ul>
     {% for artist in all_artists %} 
-    <li>
+    <div>
+        <img src="{{ artist.image_pathway }}" alt="Print" class="print_image">
         <span style="text-transform:uppercase;">
             <p class="select_artist"><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></p> 
         </span>
         <form action="/artists/{{ artist.id }}/delete" method="POST">
             <input type="submit" value="Delete">
         </form>
-    </li>
+    </div>
     {% endfor %}
 </ul>
 
