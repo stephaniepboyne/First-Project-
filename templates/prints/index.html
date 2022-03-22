@@ -8,11 +8,11 @@
     {% for print in all_prints %} 
         <li>
             <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image">
-            <div class="low">{% if print.stock < 50 %}
+            <div>{% if print.stock < 50 %}
                 {% if print.stock == 0 %}
-                    <p>OUT OF STOCK</p>
+                    <p class="out">OUT OF STOCK</p>
                 {% else %}
-                <p>LOW STOCK</p>
+                <p class="low">LOW STOCK</p>
                 {% endif %}
             {% endif %}</div>
             <p>Title: {{ print.title }}</p>

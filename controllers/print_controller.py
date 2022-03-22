@@ -26,10 +26,11 @@ def create_new_print():
     price = request.form["price"]
     printing_cost = request.form["printing_cost"]
     stock = request.form["stock"]
+    image_print_pathway = request.form["image_print_pathway"]
     artist = artist_repository.select(artist_id)
     print = Print(title, artist, size, price, printing_cost, stock)
     print_repository.save(print)
-    return redirect("/prints")
+    return redirect("/prints", image_print_pathway = image_print_pathway)
 
 @prints_blueprint.route("/prints/<id>/edit", methods=["GET"])
 def edit_print(id):
