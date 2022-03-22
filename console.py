@@ -28,7 +28,7 @@ artist_repository.save(artist_7)
 
 print_1 = Print("West Haven Waters Angus", artist_1, "25cm x 81cm", 30, 20, 200, "static/images/nael hanna - west haven.jpg")
 print_2 = Print("Fishing Boats and Creels", artist_1, "81cm x 81cm", 30, 20, 205, "static/images/Nael Hanna - Fishing Boats.jpg")
-print_3 = Print("Moonlight over Angus, Schotland", artist_1, "55cm x 70cm", 30, 20, 310, "static/images/moonlight.jpg")
+print_3 = Print("Moonlight over Angus, Scotland", artist_1, "55cm x 70cm", 30, 20, 310, "static/images/moonlight.jpg")
 print_4 = Print("Smugglers Moon", artist_2, "50cm x 52cm", 40, 25, 190, "static/images/George Birrell.jpg")
 print_5 = Print("Early Morning Harbour", artist_2, "50cm x 52cm", 40, 25, 200, "static/images/morning harbour.jpg")
 print_6 = Print("Cannach", artist_3, "40cm x 60cm", 40, 25, 40, "static/images/Cannach.jpg")
