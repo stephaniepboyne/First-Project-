@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<ul>
+<ul class="print_image_text">
     {% for print in prints %} 
     <li class="image_text">
-        <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image"></a>
-        <p><b>{{ print.title }}</b></p>
+        <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image">
+        <p>{{ print.title }}</p>
         <p>{{ artist.name }}</p>
         <p>{{ print.size }}</p>
         <p>Price: £{{ print.price }}</p>
