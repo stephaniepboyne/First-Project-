@@ -110,7 +110,7 @@ body > header > h1 > a:hover {
     border-radius: 10px;
 }
 .button:hover {
-    background-color: white;
+    background-color: rgb(247, 247, 247);
 }
 
 .new_artist_header {
@@ -164,13 +164,13 @@ body > header > h1 > a:hover {
 .view_markup {
     font-family: 'Open Sans', sans-serif;
     font-size: medium;
-    color: rgba(0, 0, 255, 0.589);
+    color: black;
     text-align:left;
     text-decoration: none;
 }
 
 .view_markup:hover {
-    color: rgba(93, 93, 248, 0.37);
+    color: darkgray;
 }
 
 .delete_print {
@@ -183,13 +183,13 @@ body > header > h1 > a:hover {
 .edit {
     font-family: 'Open Sans', sans-serif;
     font-size: medium;
-    color: rgba(0, 0, 255, 0.589);
+    color: black;
     text-align:left;
     text-decoration: none;
 }
 
 .edit:hover {
-    color: rgba(93, 93, 248, 0.37);
+    color: darkgray;
 }
 
 .low {
@@ -213,6 +213,7 @@ body > header > h1 > a:hover {
 .form-container {
     display: flex;
     justify-content: center;
+    margin-left: -100px;
 }
 
 .class_select {
