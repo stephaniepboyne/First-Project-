@@ -45,7 +45,6 @@ body > header > h1 > a:hover {
 }
 
 .new_artist {
-    text-align: left;
     padding-bottom: 30px;
     text-align: center;
 }
@@ -87,6 +86,7 @@ body > header > h1 > a:hover {
     display: flex;
     flex-flow: row wrap;
     padding-bottom: 10px;
+    margin-left: 25px;
 }
 
 .image_text > li {
@@ -108,4 +108,24 @@ body > header > h1 > a:hover {
 }
 .button:hover {
     background-color: white;
+}
+
+.new_artist_header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    color: gray;
+    text-align: right;
+    text-decoration: none;
+    padding: 4px 10px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.form {
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    color: gray;
+    text-align:center;
+    text-decoration: none;
+    padding-top: 50px;
 }

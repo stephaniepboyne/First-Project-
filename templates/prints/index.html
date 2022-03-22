@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<hr>
-<h1>Prints</h1>
 
-<a href="prints/new">New Print</a>
+<div class="new_artist"><a href="prints/new">add new print</a></div>
 
-<ul>
+<ul class="image_text">
     {% for print in all_prints %} 
         <li>
+            <img src="{{ print.image_print_pathway }}" alt="Print" class="print_image">
             <p><b>{{ print.title }}</b></p>
             <p>{{ print.artist.name }}</p>
             <p>{{ print.size }}</p>

@@ -14,5 +14,6 @@ CREATE TABLE prints (
     size VARCHAR(255),
     price INT,
     printing_cost INT,
-    stock INT
+    stock INT,
+    image_print_pathway VARCHAR(255)
 );

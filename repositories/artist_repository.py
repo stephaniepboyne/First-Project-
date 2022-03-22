@@ -50,7 +50,7 @@ def prints(artist):
     results = run_sql(sql, values)
 
     for row in results:
-        print = Print(row['title'], row['artist_id'], row['size'], row['price'], row['printing_cost'], row['stock'], row['id'])
+        print = Print(row['title'], row['artist_id'], row['size'], row['price'], row['printing_cost'], row['stock'], row['image_print_pathway'], row['id'])
         prints.append(print)
     return prints
 
