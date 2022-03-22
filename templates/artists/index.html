@@ -13,7 +13,7 @@
                 <p class="select_artist"><a href="/artists/{{ artist.id }}">{{ artist.name }}</a></p> 
             </span>
             <form action="/artists/{{ artist.id }}/delete" method="POST" class="delete">
-                <input type="submit" value="Delete">
+                <input type="submit" value="Delete Artist" class="button">
             </form>
         </li>
     {% endfor %}

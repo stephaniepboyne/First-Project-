@@ -19,7 +19,8 @@ def new_artist():
 @artists_blueprint.route("/artists", methods=['POST'])
 def create_new_artist(): 
     name = request.form["name"]
-    artist = Artist(name)
+    image_pathway = request.form["image_pathway"]
+    artist = Artist(name, image_pathway)
     artist_repository.save(artist)
     return redirect("/artists")
 
