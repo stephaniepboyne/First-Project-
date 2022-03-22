@@ -4,7 +4,8 @@
 
 <ul>
     {% for print in prints %} 
-    <li>
+    <li class="image_text">
+        <img src="{{ print.image_print_pathway }}" alt="Print" class="print_print_image"></a>
         <p><b>{{ print.title }}</b></p>
         <p>{{ artist.name }}</p>
         <p>{{ print.size }}</p>
