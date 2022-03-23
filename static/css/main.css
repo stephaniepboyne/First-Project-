@@ -105,12 +105,14 @@ body > header > h1 > a:hover {
 .button {
     font-family: 'Open Sans', sans-serif;
     color: rgb(75, 75, 75);
-    background-color: rgba(211, 211, 211, 0.459);
-    border-color: white;
+    background-color: white;
+    border-style:double;
+    border-color: red;
     border-radius: 10px;
 }
 .button:hover {
-    background-color: rgb(247, 247, 247);
+    background-color: red;
+    color: white;
 }
 
 .new_artist_header {
@@ -250,9 +252,9 @@ body > header > h1 > a:hover {
     color: gray;
     text-align: right;
     text-decoration: none;
-    padding: 4px 10px;
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 50px;
 }
 
 .artist_name {
