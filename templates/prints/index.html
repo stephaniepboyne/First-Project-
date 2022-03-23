@@ -24,7 +24,7 @@
             <p>Stock quantity: {{ print.stock }}</p>
             <a href="/prints/{{ print.id }}/edit" class="edit">Edit</a>
             <form action="/prints/{{ print.id }}/delete" method="POST" class="delete_print">
-                <input type="submit" value="Delete Print" class="button">
+                <input type="submit" value="Delete Print" class="button-del">
             </form>
         </li>
     {% endfor %}

@@ -107,10 +107,24 @@ body > header > h1 > a:hover {
     color: rgb(75, 75, 75);
     background-color: white;
     border-style:double;
-    border-color: red;
+    border-color: rgb(17, 0, 255);
     border-radius: 10px;
 }
 .button:hover {
+    background-color: rgb(17, 0, 255);
+    color: white;
+}
+
+.button-del {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(75, 75, 75);
+    background-color: white;
+    border-style:double;
+    border-color: red;
+    border-radius: 10px;  
+}
+
+.button-del:hover {
     background-color: red;
     color: white;
 }
@@ -221,7 +235,7 @@ body > header > h1 > a:hover {
     color: white;
     text-align:center;
     text-decoration: none;
-    background-color: red;
+    background-color:red;
     width: 300px;
 }
 
