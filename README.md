@@ -4,7 +4,7 @@ Stock Inventory Project for Scottish Contemporary Art Prints
 Instructions:
 Download and open project in Visual Studio Code.
 Create database for print_manager using SQL.
-Run PSQL command in your terminal: PSQL -d print_manager f db/print_manager
+Run PSQL command in your terminal: PSQL -d print_manager f db/print_manager.
 Run the console.py file using python3 in your terminal to populate the tables.
 Run flask in your terminal before opening the app in your browser. 
 
