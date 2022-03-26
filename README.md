@@ -17,12 +17,11 @@ The brief for this project was to create a shop inventory app and is as follows:
     This might mean that it makes more sense for a car shop to track makes and models of cars. Or a bookstore might sell books by author, or by publisher, and not by manufacturer. You are free to name classes and tables as appropriate to your project.
     Show an inventory page, listing all the details for all the products in stock in a single view.
     As well as showing stock quantity as a number, the app should visually highlight "low stock" and "out of stock" items to the user.
- I also worked on a couple of extensionw which allowed the user to filter the product by artist and view the markup on a particular item. 
+ I also worked on a couple of extensions which allowed the user to filter the products by artist and view the markup on a particular item. 
  
  Technologies used:
  Python3
  SQL
- PostgreSQL and psycopg 
  Flask
  Jinja 
  HTML and CSS
