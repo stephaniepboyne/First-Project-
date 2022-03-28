@@ -10,11 +10,7 @@ class Print:
         self.image_print_pathway = image_print_pathway
         self.id = id 
     
-    def calculate_markup(self):
-        difference = self.price % self.printing_cost
-        divide = self.printing_cost / difference 
-        percent = 100 / divide 
-        return percent
+   
     
 
     
